@@ -28,7 +28,7 @@ import yohannaAutomations.pageObjects.android.HomescreenSelectionPage;
 
 public class onboardingUIAutomation extends basetest{
 	@Test
-	public void AppiumTest() throws MalformedURLException, URISyntaxException, InterruptedException {
+	public void IntroScreenTest() throws MalformedURLException, URISyntaxException, InterruptedException {
 		
 		onboardingPage.validateSplashScreen();
 		
