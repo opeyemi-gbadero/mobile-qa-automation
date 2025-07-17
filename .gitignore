@@ -1,0 +1,5 @@
+*.apk
+*.class
+target/
+test-output/
+.DS_Store
