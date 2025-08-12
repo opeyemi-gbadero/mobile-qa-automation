@@ -6,8 +6,9 @@
       <class name="yohannaAutomations.onboardingUIAutomation">
         <methods>
           <include name="tearDown"/>
-          <include name="AppiumTest"/>
+          <include name="setUp"/>
           <include name="ConfigureAppium"/>
+          <include name="validateFeedscreenWalkThroughPage"/>
         </methods>
       </class> <!-- yohannaAutomations.onboardingUIAutomation -->
     </classes>

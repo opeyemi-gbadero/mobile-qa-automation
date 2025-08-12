@@ -81,14 +81,15 @@ public class FeedscreenWelcomeModalPage extends AndroidActions {
 	
 	}
 	
-	public HomescreenSelectionPage clickContinue() {
+	public FeedscreenWalkThroughPage clickContinue() {
 		Assert.assertTrue(continueButton.isDisplayed(), "Continue Button is not displayed");
 		Assert.assertTrue(continueButton.isEnabled(), "Continue Button is not enabled");
 		wait.until(ExpectedConditions.elementToBeClickable(continueButton));
 		continueButton.click();
-		wait.until(ExpectedConditions.visibilityOf(chooseYourHomeScreenModal));
-		Assert.assertTrue(chooseYourHomeScreenModal.isDisplayed(), "Choose your home-screen modal is not displayed");
-		return new HomescreenSelectionPage(driver);
+		//wait.until(ExpectedConditions.visibilityOf(chooseYourHomeScreenModal));
+		//Assert.assertTrue(chooseYourHomeScreenModal.isDisplayed(), "Choose your home-screen modal is not displayed");
+		//return new HomescreenSelectionPage(driver);
+		return new FeedscreenWalkThroughPage(driver);
 
 	}
 	

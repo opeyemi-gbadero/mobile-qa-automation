@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,12 +103,17 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="yohannaAutomations.onboardingUIAutomation" class="method navigator-link" hash-for-method="AppiumTest">AppiumTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="yohannaAutomations.onboardingUIAutomation" class="method navigator-link" hash-for-method="IntroScreenTest">IntroScreenTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="yohannaAutomations.onboardingUIAutomation" class="method navigator-link" hash-for-method="ScreenSelectionTest">ScreenSelectionTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="yohannaAutomations.onboardingUIAutomation" class="method navigator-link" hash-for-method="feedscreenValidationForNonRegisteredUsers">feedscreenValidationForNonRegisteredUsers</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="yohannaAutomations.onboardingUIAutomation" class="method navigator-link" hash-for-method="feedscreenValidationForNonRegisteredUsersII">feedscreenValidationForNonRegisteredUsersII</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -131,16 +136,23 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="AppiumTest">
-                  </a> <!-- AppiumTest -->
-                  <span class="method-name">AppiumTest</span>
+                  <a name="IntroScreenTest">
+                  </a> <!-- IntroScreenTest -->
+                  <span class="method-name">IntroScreenTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="ScreenSelectionTest">
-                  </a> <!-- ScreenSelectionTest -->
-                  <span class="method-name">ScreenSelectionTest</span>
+                  <a name="feedscreenValidationForNonRegisteredUsers">
+                  </a> <!-- feedscreenValidationForNonRegisteredUsers -->
+                  <span class="method-name">feedscreenValidationForNonRegisteredUsers</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="feedscreenValidationForNonRegisteredUsersII">
+                  </a> <!-- feedscreenValidationForNonRegisteredUsersII -->
+                  <span class="method-name">feedscreenValidationForNonRegisteredUsersII</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -148,7 +160,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/kb/dmj76ln56ls8n89xd1ydqpgw0000gn/T/testng-eclipse-1627529093/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/kb/dmj76ln56ls8n89xd1ydqpgw0000gn/T/testng-eclipse-25823649/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -197,20 +209,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'ScreenSelectionTest')
+data.setCell(0, 1, 'feedscreenValidationForNonRegisteredUsersII')
 data.setCell(0, 2, 'yohannaAutomations.onboardingUIAutomation')
-data.setCell(0, 3, 19013);
+data.setCell(0, 3, 104202);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'AppiumTest')
+data.setCell(1, 1, 'feedscreenValidationForNonRegisteredUsers')
 data.setCell(1, 2, 'yohannaAutomations.onboardingUIAutomation')
-data.setCell(1, 3, 7121);
+data.setCell(1, 3, 44081);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'IntroScreenTest')
+data.setCell(2, 2, 'yohannaAutomations.onboardingUIAutomation')
+data.setCell(2, 3, 6532);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 26 seconds</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -241,17 +257,33 @@ return data;
                 <span class="method-name">ConfigureAppium</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">31520 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">AppiumTest</span>
-                <span class="method-start">33924 ms</span>
+                <span class="method-name">IntroScreenTest</span>
+                <span class="method-start">31650 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">38199 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">ScreenSelectionTest</span>
-                <span class="method-start">41062 ms</span>
+                <span class="method-name">feedscreenValidationForNonRegisteredUsers</span>
+                <span class="method-start">38210 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">82316 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">feedscreenValidationForNonRegisteredUsersII</span>
+                <span class="method-start">82325 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">60095 ms</span>
+                <span class="method-start">186539 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -26,7 +26,7 @@ public class HomescreenSelectionPage extends AndroidActions {
 	public HomescreenSelectionPage(AndroidDriver driver) {
 	super(driver);
 	this.driver = driver;
-    this.wait = new WebDriverWait(driver, Duration.ofSeconds(2));
+    this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 	PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
 	
@@ -64,7 +64,7 @@ public class HomescreenSelectionPage extends AndroidActions {
 		//Assert.assertFalse(previewModalImage.isDisplayed(), "Preview modal image is still displayed after clicking it");
 	}
 	
-	public void validateBibleScreenPreviewModalImage() {
+	public FeedscreenWalkThroughPage validateBibleScreenPreviewModalImage() {
 		bibleReadingScreenModal.click();
 		Assert.assertTrue(setReadingScreenButton.isEnabled(), "setReadingScreenButton is not enabled");
 		Assert.assertTrue(tapToPreviewButton.isEnabled(), "taptopreviewbutton modal image is not enabled");
@@ -74,6 +74,8 @@ public class HomescreenSelectionPage extends AndroidActions {
 		//Assert.assertFalse(previewModalImage.isDisplayed(), "Preview modal image is still displayed after clicking it");
 		setReadingScreenButton.click();
 		wait.until(ExpectedConditions.invisibilityOf(setReadingScreenButton));
+		
+		return new FeedscreenWalkThroughPage(driver);
 
 		
 	}
