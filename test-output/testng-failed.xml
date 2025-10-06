@@ -6,9 +6,14 @@
       <class name="yohannaAutomations.onboardingUIAutomation">
         <methods>
           <include name="tearDown"/>
+          <include name="feedscreenValidationForNonRegisteredUsers"/>
+          <include name="ValidateLanguageSynconSignUpPage"/>
+          <include name="validateLogOutFunctionality"/>
+          <include name="ValidateProfileSection"/>
           <include name="setUp"/>
+          <include name="ValidatevalidMailInputOnSignUpPage"/>
           <include name="ConfigureAppium"/>
-          <include name="validateFeedscreenWalkThroughPage"/>
+          <include name="ValidateInvalidMailInputOnSignUpPage"/>
         </methods>
       </class> <!-- yohannaAutomations.onboardingUIAutomation -->
     </classes>

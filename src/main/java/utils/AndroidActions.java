@@ -7,8 +7,10 @@ import java.util.Map;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebElement;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.apache.commons.io.FileUtils;
 
@@ -28,7 +30,7 @@ public class AndroidActions {
 	    ((JavascriptExecutor) driver).executeScript("mobile: swipeGesture", ImmutableMap.of(
 	        "elementId", ((RemoteWebElement) element).getId(),
 	        "direction", direction,
-	        "percent", 0.9	  
+	        "percent", 1.0	  
 	    ));
     
 	}
@@ -77,6 +79,47 @@ public class AndroidActions {
 	    driver.executeScript("mobile: scrollGesture", scrollParams);
 	}
 	
+	public void scrollDownUntilVisible(WebElement page, String accessibilityId) {
+	    int maxScrolls = 10;
+	    for (int i = 0; i < maxScrolls; i++) {
+	        try {
+	            WebElement element = driver.findElement(AppiumBy.accessibilityId(accessibilityId));
+	            if (element.isDisplayed()) {
+	                return; 
+	            }
+	        } catch (Exception e) {
+	            
+	        }
+	       
+	        Map<String, Object> scrollParams = new HashMap<>();
+	        scrollParams.put("elementId", ((org.openqa.selenium.remote.RemoteWebElement) page).getId());
+	        scrollParams.put("direction", "down");
+	        scrollParams.put("percent", 1.0);
+	        driver.executeScript("mobile: scrollGesture", scrollParams);
+	    }
+	    throw new RuntimeException("Element with accessibilityId '" + accessibilityId + "' not found after scrolling.");
+	}
+
+	
+	public void validateButtonStatus(WebElement tab, String message) {
+		Assert.assertTrue(tab.isEnabled(), message);
+		Assert.assertTrue(tab.isDisplayed(), message);
+	}
+	
+	public void validateDisplayOfUI(WebElement element, String elementName) {
+		Assert.assertTrue(element.isDisplayed(), elementName + " is not displayed");
+	}
+	
+	public void takeScreenshot(String fileName) {
+	    try {
+	        File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+	        File destFile = new File(System.getProperty("user.dir") + "/screenshots/" + fileName + ".png");
+	        FileUtils.copyFile(srcFile, destFile);
+	        System.out.println(" Screenshot saved: " + destFile.getAbsolutePath());
+	    } catch (IOException e) {
+	        System.out.println("️ Failed to save screenshot: " + e.getMessage());
+	    }
+	}
 	
 	
 }

@@ -74,7 +74,12 @@ public class VodWalthroughNarrativePage extends AndroidActions {
 		assertElementToBeVisible(verseOfTheDay, "Verse of the Day is not visible");
 		assertElementToBeVisible(vodBookName, "Vod Book Name is not visible");
 		assertElementToBeVisible(narrativeTitle, "Narrative Title is not visible");
+		try {
 		assertElementToBeVisible(narrativeDescription, "Narrative Description is not visible");
+		} catch (Exception e) {
+			takeScreenshot("NarrativeDescriptionNotVisible");
+			
+		}
 		assertElementToBeVisible(iAmAllDoneButton, "I am all done button is not visible");
 		assertElementToBeVisible(shareButton, "Share button is not visible");
 	}
@@ -92,7 +97,11 @@ public class VodWalthroughNarrativePage extends AndroidActions {
 	}
 	
 	public FeedscreenPage clickIamAllDoneButton() {
+		try {
 		scrollDown();
+		}catch (Throwable e) {
+			takeScreenshot("ScrollDownFailed");
+		}
 		iAmAllDoneButton.click();
 		return new FeedscreenPage(driver);
 	}

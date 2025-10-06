@@ -10,6 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
 
 import utils.AndroidActions;
 
@@ -48,7 +49,7 @@ public class OnboardingPage extends AndroidActions {
 	@AndroidFindBy(accessibility="Stay Connected Every Day")
 	private WebElement stayConnectedEveryDay;
 	
-	@AndroidFindBy(xpath="//android.view.View[@content-desc=\"Start your day with an uplifting Verse of the Day, reflect on your emotions with the Mood Check-In, and deepen your spiritual connection with tools designed to inspire and guide you.\"]")
+	@AndroidFindBy(xpath="//android.view.View[@content-desc=\"Start your day with an uplifting Verse of the Day, reflect on your emotions with the Devotional, and deepen your spiritual connection with tools designed to inspire and guide you.\"]")
 	private WebElement stayConnectedEveryDayDescription;
 	
 	@AndroidFindBy(accessibility="Next")
@@ -112,14 +113,39 @@ public class OnboardingPage extends AndroidActions {
 	}
 	
 	public void verifyTheDisplayOfStayConnectedEveryDay() {
+		
+		//Assert.assertTrue(stayConnectedEveryDay.isDisplayed(), "Stay Connected Every Day text is not displayed");
 		wait.until(ExpectedConditions.visibilityOf(stayConnectedEveryDay));
 		Assert.assertTrue(stayConnectedEveryDay.isDisplayed(), "Stay Connected Every Day text is not displayed");
+
+		
 	}
 	
-	public void verifyTheDisplayOfStayConnectedEveryDayDescription() {
+	
+	 /* 
+	  	public void verifyTheDisplayOfStayConnectedEveryDayDescription() {
+		try {
 		wait.until(ExpectedConditions.visibilityOf(stayConnectedEveryDayDescription));
 		Assert.assertTrue(stayConnectedEveryDayDescription.isDisplayed(), "Stay Connected Every Day description is not displayed");
+
+		}catch(Exception t) {
+			System.out.println("Exception caught: " + t.getMessage());
+		}
 	}
+	*/
+	
+		public void verifyTheDisplayOfStayConnectedEveryDayDescription(SoftAssert softAssert) {
+		try {
+		wait.until(ExpectedConditions.visibilityOf(stayConnectedEveryDayDescription));
+		softAssert.assertTrue(stayConnectedEveryDayDescription.isDisplayed(), "Stay Connected Every Day description is not displayed");
+
+		}catch(Exception t) {
+			softAssert.fail("Exception caught: "  + t.getMessage());
+			 takeScreenshot("next_failed_" + t);
+		}
+	}
+	
+	
 	
 	public void validateNextButtonIsClickable() {
 		wait.until(ExpectedConditions.elementToBeClickable(nextButton));

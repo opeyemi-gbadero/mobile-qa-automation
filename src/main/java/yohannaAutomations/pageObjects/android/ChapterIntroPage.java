@@ -45,7 +45,7 @@ public class ChapterIntroPage extends AndroidActions {
 	private WebElement chapterIntroDescription;
 	
 	
-	@AndroidFindBy(accessibility = "'Proceed to Genesis Chapter 1")
+	@AndroidFindBy(accessibility = "Proceed to Genesis Chapter 1")
 	private WebElement proceedToChapterButton;
 	
 	private void validateDisplayOfElement(WebElement element, String elementName) {

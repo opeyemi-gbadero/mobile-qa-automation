@@ -1,41 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-12T18:25:53 WAT" name="Default suite" finished-at="2025-08-12T18:29:01 WAT" duration-ms="187990">
+  <suite started-at="2025-10-06T22:55:08 WAT" name="Default suite" finished-at="2025-10-06T23:01:55 WAT" duration-ms="406208">
     <groups>
     </groups>
-    <test started-at="2025-08-12T18:25:53 WAT" name="Default test" finished-at="2025-08-12T18:29:01 WAT" duration-ms="187990">
+    <test started-at="2025-10-06T22:55:08 WAT" name="Default test" finished-at="2025-10-06T23:01:55 WAT" duration-ms="406208">
       <class name="yohannaAutomations.onboardingUIAutomation">
-        <test-method is-config="true" signature="ConfigureAppium()[pri:0, instance:yohannaAutomations.onboardingUIAutomation@63475ace]" started-at="2025-08-12T18:25:53 WAT" name="ConfigureAppium" finished-at="2025-08-12T18:26:25 WAT" duration-ms="31510" status="PASS">
+        <test-method is-config="true" signature="ConfigureAppium()[pri:0, instance:yohannaAutomations.onboardingUIAutomation@7494f96a]" started-at="2025-10-06T22:55:08 WAT" name="ConfigureAppium" finished-at="2025-10-06T22:55:22 WAT" duration-ms="13517" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ConfigureAppium -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:yohannaAutomations.onboardingUIAutomation@63475ace]" started-at="2025-08-12T18:26:25 WAT" name="setUp" finished-at="2025-08-12T18:26:25 WAT" duration-ms="129" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:yohannaAutomations.onboardingUIAutomation@7494f96a]" started-at="2025-10-06T22:55:22 WAT" name="setUp" finished-at="2025-10-06T22:55:22 WAT" duration-ms="39" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="IntroScreenTest()[pri:0, instance:yohannaAutomations.onboardingUIAutomation@63475ace]" started-at="2025-08-12T18:26:25 WAT" name="IntroScreenTest" finished-at="2025-08-12T18:26:31 WAT" duration-ms="6532" status="PASS">
+        <test-method signature="IntroScreenTest()[pri:0, instance:yohannaAutomations.onboardingUIAutomation@7494f96a]" started-at="2025-10-06T22:55:22 WAT" name="IntroScreenTest" finished-at="2025-10-06T22:55:26 WAT" duration-ms="4148" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- IntroScreenTest -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:yohannaAutomations.onboardingUIAutomation@63475ace]" started-at="2025-08-12T18:26:31 WAT" name="setUp" finished-at="2025-08-12T18:26:31 WAT" duration-ms="10" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:yohannaAutomations.onboardingUIAutomation@7494f96a]" started-at="2025-10-06T22:55:26 WAT" name="setUp" finished-at="2025-10-06T22:55:26 WAT" duration-ms="13" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="feedscreenValidationForNonRegisteredUsers()[pri:0, instance:yohannaAutomations.onboardingUIAutomation@63475ace]" started-at="2025-08-12T18:26:31 WAT" name="feedscreenValidationForNonRegisteredUsers" finished-at="2025-08-12T18:27:15 WAT" duration-ms="44081" status="PASS">
+        <test-method signature="feedscreenValidationForNonRegisteredUsers()[pri:0, instance:yohannaAutomations.onboardingUIAutomation@7494f96a]" started-at="2025-10-06T22:55:26 WAT" name="feedscreenValidationForNonRegisteredUsers" finished-at="2025-10-06T22:56:57 WAT" duration-ms="90451" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feedscreenValidationForNonRegisteredUsers -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:yohannaAutomations.onboardingUIAutomation@63475ace]" started-at="2025-08-12T18:27:15 WAT" name="setUp" finished-at="2025-08-12T18:27:15 WAT" duration-ms="8" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:yohannaAutomations.onboardingUIAutomation@7494f96a]" started-at="2025-10-06T22:56:57 WAT" name="setUp" finished-at="2025-10-06T22:56:57 WAT" duration-ms="9" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="feedscreenValidationForNonRegisteredUsersII()[pri:0, instance:yohannaAutomations.onboardingUIAutomation@63475ace]" started-at="2025-08-12T18:27:15 WAT" name="feedscreenValidationForNonRegisteredUsersII" finished-at="2025-08-12T18:29:00 WAT" depends-on-methods="yohannaAutomations.onboardingUIAutomation.feedscreenValidationForNonRegisteredUsers" duration-ms="104202" status="PASS">
+        <test-method signature="ValidateProfileSection()[pri:0, instance:yohannaAutomations.onboardingUIAutomation@7494f96a]" started-at="2025-10-06T22:56:57 WAT" name="ValidateProfileSection" finished-at="2025-10-06T22:57:12 WAT" depends-on-methods="yohannaAutomations.onboardingUIAutomation.feedscreenValidationForNonRegisteredUsers" duration-ms="15570" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- feedscreenValidationForNonRegisteredUsersII -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:yohannaAutomations.onboardingUIAutomation@63475ace]" started-at="2025-08-12T18:29:00 WAT" name="tearDown" finished-at="2025-08-12T18:29:01 WAT" duration-ms="1434" status="PASS">
+        </test-method> <!-- ValidateProfileSection -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:yohannaAutomations.onboardingUIAutomation@7494f96a]" started-at="2025-10-06T22:57:12 WAT" name="setUp" finished-at="2025-10-06T22:57:12 WAT" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="ValidateLanguageSynconSignUpPage()[pri:0, instance:yohannaAutomations.onboardingUIAutomation@7494f96a]" started-at="2025-10-06T22:57:12 WAT" name="ValidateLanguageSynconSignUpPage" finished-at="2025-10-06T22:57:48 WAT" depends-on-methods="yohannaAutomations.onboardingUIAutomation.ValidateProfileSection" duration-ms="35588" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidateLanguageSynconSignUpPage -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:yohannaAutomations.onboardingUIAutomation@7494f96a]" started-at="2025-10-06T22:57:48 WAT" name="setUp" finished-at="2025-10-06T22:57:48 WAT" duration-ms="84" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="ValidateInvalidMailInputOnSignUpPage(java.lang.String,java.lang.String)[pri:0, instance:yohannaAutomations.onboardingUIAutomation@7494f96a]" started-at="2025-10-06T22:57:48 WAT" name="ValidateInvalidMailInputOnSignUpPage" data-provider="invalidEmailData" finished-at="2025-10-06T22:57:58 WAT" depends-on-methods="yohannaAutomations.onboardingUIAutomation.ValidateLanguageSynconSignUpPage" duration-ms="10494" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Saskia Zoe]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[saskia.zoe.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidateInvalidMailInputOnSignUpPage -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:yohannaAutomations.onboardingUIAutomation@7494f96a]" started-at="2025-10-06T22:57:58 WAT" name="setUp" finished-at="2025-10-06T22:57:58 WAT" duration-ms="10" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="ValidatevalidMailInputOnSignUpPage(java.lang.String,java.lang.String)[pri:0, instance:yohannaAutomations.onboardingUIAutomation@7494f96a]" started-at="2025-10-06T22:57:58 WAT" name="ValidatevalidMailInputOnSignUpPage" data-provider="validEmailData" finished-at="2025-10-06T23:00:40 WAT" depends-on-methods="yohannaAutomations.onboardingUIAutomation.ValidateInvalidMailInputOnSignUpPage" duration-ms="162017" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[wednesdaytesting]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[wednesdaytesting27@mailinator.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidatevalidMailInputOnSignUpPage -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:yohannaAutomations.onboardingUIAutomation@7494f96a]" started-at="2025-10-06T23:00:40 WAT" name="setUp" finished-at="2025-10-06T23:00:40 WAT" duration-ms="7" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="validateLogOutFunctionality(java.lang.String,java.lang.String)[pri:0, instance:yohannaAutomations.onboardingUIAutomation@7494f96a]" started-at="2025-10-06T23:00:40 WAT" name="validateLogOutFunctionality" data-provider="validEmailData" finished-at="2025-10-06T23:01:53 WAT" depends-on-methods="yohannaAutomations.onboardingUIAutomation.ValidatevalidMailInputOnSignUpPage" duration-ms="72250" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[wednesdaytesting]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[wednesdaytesting27@mailinator.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateLogOutFunctionality -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:yohannaAutomations.onboardingUIAutomation@7494f96a]" started-at="2025-10-06T23:01:53 WAT" name="tearDown" finished-at="2025-10-06T23:01:55 WAT" duration-ms="1802" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

@@ -21,33 +21,36 @@ import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
-public class DevotionalScreenPage extends AndroidActions {
+public class PreferencePage extends AndroidActions {
 	AndroidDriver driver;
     private WebDriverWait wait;
+    private LoginPageScreen loginPageScreen;
+    private FeedscreenPage feedscreenPage;
 
-	public DevotionalScreenPage(AndroidDriver driver) {
+	public PreferencePage(AndroidDriver driver) {
 	super(driver);
 	this.driver = driver;
+	this.loginPageScreen = new LoginPageScreen(driver);
+	this.feedscreenPage = new FeedscreenPage(driver);
     this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
 	
-	
-	@AndroidFindBy(xpath="//android.widget.ImageView[contains(@content-desc, 'Devotional') and contains(@content-desc, 'Sharing how you’re feeling takes courage')]")
-	private WebElement devotionalWelcomeModal;
-	
-	@AndroidFindBy(accessibility = "Continue")
-	private WebElement continueButton;
+	@AndroidFindBy(xpath="//android.widget.ImageView[@index = '1']")
+	private WebElement themeButton;
 	
 	
+	@AndroidFindBy(accessibility = "Appearance\nSystem\nSwitch between light and dark modes to suit your reading environment")
+	private WebElement appearanceButton;
 	
-	public WebElement getDevotionalWelcomeModal() {
-		return devotionalWelcomeModal;
+	
+	
+	public ApearanceThemePage clickThemeButton() {
+		appearanceButton.click();
+		return new ApearanceThemePage(driver);
 	}
 	
-	public WebElement getContinueButton() {
-		return continueButton;
-	}
+	
 	
 }
 

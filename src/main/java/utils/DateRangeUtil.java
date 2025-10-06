@@ -39,6 +39,6 @@ public class DateRangeUtil {
 
     public static void main(String[] args) {
         String dateRange = getWeekRangeString();
-        
+            
     }
 }

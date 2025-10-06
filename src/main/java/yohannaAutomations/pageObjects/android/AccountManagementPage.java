@@ -10,6 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
 
 import utils.AndroidActions;
 
@@ -21,32 +22,43 @@ import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
-public class DevotionalScreenPage extends AndroidActions {
+public class AccountManagementPage extends AndroidActions {
 	AndroidDriver driver;
     private WebDriverWait wait;
+    private ProfilePage profilePage;
+    private LoginPageScreen loginPageScreen;
 
-	public DevotionalScreenPage(AndroidDriver driver) {
+	public AccountManagementPage(AndroidDriver driver) {
 	super(driver);
 	this.driver = driver;
+	this.profilePage = new ProfilePage(driver);
+	this.loginPageScreen = new LoginPageScreen(driver);
     this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
 	
+	@AndroidFindBy(accessibility="Delete All Local Data")
+	private WebElement deleteAllLocalDataButton;
 	
-	@AndroidFindBy(xpath="//android.widget.ImageView[contains(@content-desc, 'Devotional') and contains(@content-desc, 'Sharing how you’re feeling takes courage')]")
-	private WebElement devotionalWelcomeModal;
+	@AndroidFindBy(accessibility="Log Out")
+	private WebElement logOutButton;
 	
-	@AndroidFindBy(accessibility = "Continue")
-	private WebElement continueButton;
+	@AndroidFindBy(accessibility= "Delete Account")
+	private WebElement deleteAccountButton;
 	
 	
+	public FeedscreenPage validateLogOutButtonFunctionality(SoftAssert softassert) {
+		try {
+		logOutButton.click();
+		softassert.assertTrue(loginPageScreen.getLoginPage().isDisplayed());
+		}catch(Exception e) {
+			takeScreenshot("validateLogOutButtonFunctionality");
+			softassert.fail("Log Out button functionality is not working");
+		}
+		
+		return new FeedscreenPage(driver);
 	
-	public WebElement getDevotionalWelcomeModal() {
-		return devotionalWelcomeModal;
-	}
 	
-	public WebElement getContinueButton() {
-		return continueButton;
 	}
 	
 }

@@ -37,7 +37,7 @@ public class basetest {
 		UiAutomator2Options options = new  UiAutomator2Options();
 		options.setDeviceName("Pixel8");
 		//options.setApp("//Users//user//eclipse-workspace//Automation//src//test//java//resources//General-Store.apk");
-		options.setApp("/Users/user/eclipse-workspace/YohannaProject/src/test/java/resources/app-staging-satb.apk");
+		options.setApp("/Users/user/eclipse-workspace/YohannaProject/src/test/java/resources/app-staging-zza.apk");
 
 		 driver = new AndroidDriver(new URI("http://127.0.0.1:4723").toURL(), options);
 		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
